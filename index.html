@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="./app.css" rel="stylesheet" type="text/css">
+
+    <title>six hackathon / open data</title>
+  <style type="text/css"></style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['geochart']});
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+
+        var data = google.visualization.arrayToDataTable([
+			['Country', 'Total money flow'],
+			['AD',5544],
+			['AE',218949],
+			['AR',12540],
+			['AM',46764],
+			['AU',81805],
+			['AT',303136],
+			['AZ',68692],
+			['BE',155369],
+			['BA',16292],
+			['BH',4227],
+			['BS',6159],
+			['BY',28086],
+			['BR',88761],
+			['CA',139440],
+			['CH',15070839],
+			['CL',19604],
+			['CN',195637],
+			['CI',510],
+			['CK',12],
+			['CY',79449],
+			['CZ',38836],
+			['DE',3780302],
+			['DK',79984],
+			['EG',63389],
+			['ES',191550],
+			['ET',9623],
+			['FI',48134],
+			['FR',860413],
+			['GB',1035066],
+			['GR',53196],
+			['GT',1058],
+			['HK',62798],
+			['HR',10444],
+			['HU',34599],
+			['IN',98163],
+			['IE',43495],
+			['IL',109804],
+			['IT',508150],
+			['JO',22050],
+			['JP',57221],
+			['KZ',374174],
+			['KR',25821],
+			['KW',55681],
+			['LB',72362],
+			['LI',218691],
+			['LT',25691],
+			['LU',204221],
+			['LV',158685],
+			['MA',1347],
+			['MC',1167],
+			['MX',39965],
+			['MT',46024],
+			['MN',662],
+			['MU',7638],
+			['MY',17203],
+			['NG',6749],
+			['NL',246152],
+			['NO',83202],
+			['NZ',24637],
+			['PK',6548],
+			['PE',4727],
+			['PL',37958],
+			['QA',334677],
+			['RO',27009],
+			['RU',3518810],
+			['SA',567024],
+			['SG',70527],
+			['RS',8120],
+			['SK',17552],
+			['SI',11679],
+			['SW',129435],
+			['TH',32231],
+			['TN',415],
+			['TR',173713],
+			['TW',10524],
+			['UA',255252],
+			['US',1002828],
+			['VG',540],
+			['ZA',37745]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+
+<body>
+
+<div class="ng-scope">
+<sign-in class="ng-scope">
+<button ng-if="!signedIn &amp;&amp; !signingIn" ng-click="signIn()" class="ng-scope">Hey six!</button>
+</sign-in>
+<div class="page-layout ng-scope" >
+
+  <header>
+
+    <div class="promo-area">
+      <cycler slides="featured" class="ng-isolate-scope"><ul class="slides-wrapper" style="width: 1326px; transform: translate3d(0%, 0px, 0px);">
+
+  <!-- ngRepeat: slide in slides --><li class="slide ng-scope" ng-repeat="slide in slides" ng-click="goto_Detail(slide.id)" style="padding-bottom: 27px; width: 663px; min-height: 400px;">
+
+	<iframe width="100%" height="520" frameborder="0" src="https://username255.cartodb.com/viz/d5d672a4-e35d-11e5-9e7c-0e31c9be1b51/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+    <div class="description ng-isolate-scope" marked="slide.description"><p>Income heatmap.</p>
+</div>
+  </li>
+
+</ul>
+    </cycler></div>
+  </header>
+
+  <div class="main-listing" image-masking="">
+    <!-- ngIf: published --><section class="ng-scope" ng-if="published">
+      <h3><span class="center">Google Fusion table <sub>(1mln rows+)</sub></span></h3>
+      <!-- ngRepeat: _ in published --><!-- ngInclude: 'static/templates/_s/' + _._Type + '.html' --><article _="" ng-repeat="_ in published" ng-include="&#39;static/templates/_s/&#39; + _._Type + &#39;.html&#39;" ng-click="goto_Detail(_)" transition-timing="500" class="published"><div class="outer ng-scope">
+
+    <iframe width="800" height="480" scrolling="no" frameborder="no" style="margin-left: 60px" src="https://www.google.com/fusiontables/embedviz?q=select+col5%2C+col6%2C+col4+from+14iueTwadTMqj_j37gT_ohhx_o6XgIrZQ-0p2RTMn+where+col1+%3E%3D+&#39;2014-08-13+00%3A00%3A00&#39;+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=47.38739182277548&amp;lng=8.517654675918607&amp;t=3&amp;z=16&amp;l=col5&amp;y=3&amp;tmplt=4&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=0.6&amp;hmr=15&amp;hmw=4&amp;hml=TWO_COL_LAT_LNG"></iframe>
+	
+	<div id="regions_div" style="width: 1280px; height: 500px; margin-left: 20px; margin-top: 100px"></div>
+
+</div>
+</article>
+</section><!-- end ngIf: published -->
+
+</div>
+
+</footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</body></html>
